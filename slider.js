@@ -1,7 +1,7 @@
-const makeSlider = (selector) => {
-	const slider = document.querySelector(selector + ' .slider');
-	const left = document.querySelector(selector + ' .left');
-	const right = document.querySelector(selector + ' .right');
+const makeSlider = (rootNode) => {
+	const slider = rootNode.querySelector('.slider');
+	const left = rootNode.querySelector('.left');
+	const right = rootNode.querySelector('.right');
 
 	const sliderItemCount = slider.children.length;
 	slider.style.width = sliderItemCount * 100 + '%';
@@ -21,11 +21,12 @@ const makeSlider = (selector) => {
 		slider.style.left = -100*sliderPosition + '%';
 	});
 };
+[...document.querySelectorAll('.hero-image')].forEach(makeSlider);
 
-const makeProcess = (selector) => {
-	const sequence = document.querySelector(selector + ' .sequence');
-	const left = document.querySelector(selector + ' .left');
-	const right = document.querySelector(selector + ' .right');
+const makeProcess = (rootNode) => {
+	const sequence = rootNode.querySelector('.sequence');
+	const left = rootNode.querySelector('.left');
+	const right = rootNode.querySelector('.right');
 
 	const sequenceItemCount = sequence.children.length;
 	const sequenceItems = [...sequence.children];
@@ -45,3 +46,4 @@ const makeProcess = (selector) => {
 	});
 
 };
+[...document.querySelectorAll('.process-sequence')].forEach(makeProcess);
