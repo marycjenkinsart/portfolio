@@ -3,9 +3,12 @@ body {
 	font-family: sans-serif;
 }
 .container {
-	padding: 32px;
+	padding: 1rem;
 	max-width: 960px;
 	margin: auto;
+}
+header {
+	padding-bottom: 1rem;
 }
 header nav ul {
 	margin: 0;
@@ -37,10 +40,11 @@ header nav ul li a:active {
 }
 
 .hero-image {
-	padding-bottom: calc(3/4 * 100%);
+	padding-bottom: calc(2/3 * 100%);
 	background-color: #aaa;
 	position: relative;
 	overflow: hidden;
+	border-radius: 1rem;
 }
 .aspect-container {
 	position: absolute;
