@@ -8,7 +8,7 @@ const makeSlider = (selector) => {
 	slider.style.width = sliderItemCount * 100 + '%';
 	[...slider.children].forEach((imageContainer)=>{
 		imageContainer.style.width = `calc(100% / ${sliderItemCount})`;
-	})
+	});
 	let sliderPosition = 0;
 	left.addEventListener('click', () => {
 		sliderPosition += sliderItemCount;
