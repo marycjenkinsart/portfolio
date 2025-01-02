@@ -30,19 +30,27 @@ const makeProcess = (rootNode) => {
 
 	const sequenceItemCount = sequence.children.length;
 	const sequenceItems = [...sequence.children];
-	let sequencePosition = 0;
+	let sequencePosition = sequenceItemCount-1;
 	left.addEventListener('click', () => {
-		sequenceItems[sequencePosition].removeAttribute('style');
+		sequenceItems.forEach((_,i)=>{
+			sequenceItems[i].classList.remove('inactive');
+		});
+		sequenceItems[sequencePosition].classList.remove('active');
+		sequenceItems[sequencePosition].classList.add('inactive');
 		sequencePosition += sequenceItemCount;
 		sequencePosition -= 1;
 		sequencePosition %= sequenceItemCount;
-		sequenceItems[sequencePosition].style = 'z-index: 100;'
+		sequenceItems[sequencePosition].classList.add('active');
 	});
 	right.addEventListener('click', () => {
-		sequenceItems[sequencePosition].removeAttribute('style');
+		sequenceItems.forEach((_,i)=>{
+			sequenceItems[i].classList.remove('inactive');
+		});
+		sequenceItems[sequencePosition].classList.remove('active');
+		sequenceItems[sequencePosition].classList.add('inactive');
 		sequencePosition += 1;
 		sequencePosition %= sequenceItemCount;
-		sequenceItems[sequencePosition].style = 'z-index: 100;'
+		sequenceItems[sequencePosition].classList.add('active');
 	});
 
 };
