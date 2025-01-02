@@ -73,10 +73,34 @@ header nav ul li a:active {
 	top: 50%;
 	width: 100%;
 	transform: translate(0, -50%);
+	height: 2rem;
+}
+.controls button {
+	background-color: #0008;
+	color: white;
+	text-decoration: none;
+	display: block;
+	line-height: 2rem;
+	border-radius: 1rem;
+	width: 2rem;
+	padding: 0;
+	border: 0;
+	text-align: center;
+}
+.controls button:hover,
+.controls button:focus {
+	background-color: #3338;
+}
+.controls button:active {
+	background-color: #6668;
 }
 .controls .right {
 	position: absolute;
-	right: 0;
+	right: 1rem;
+}
+.controls .left {
+	position: absolute;
+	left: 1rem;
 }
 
 
