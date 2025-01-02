@@ -40,44 +40,46 @@ header nav ul li a:active {
 }
 
 .hero-image {
-	padding-bottom: calc(2/3 * 100%);
 	background-color: #aaa;
 	position: relative;
 	overflow: hidden;
 	border-radius: 1rem;
 }
-.aspect-container {
+.hero-image .aspect-container {
 	position: absolute;
 	height: 100%;
 	width: 100%;
 }
-.slider {
+.hero-image .slider {
 	height: 100%;
 	position: absolute;
 	font-size: 0;
 	left: 0;
 	transition: all 500ms ease;
 }
-.slider .image-container {
+.hero-image .slider .image-container {
 	height: 100%;
 	display: inline-block;
 	position: relative;
 }
-.slider .image-container img {
+.hero-image .slider .image-container img {
 	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
 }
-.controls {
+.process-sequence .controls,
+.hero-image .controls {
 	position: absolute;
 	top: 50%;
 	width: 100%;
 	transform: translate(0, -50%);
 	height: 2rem;
+	z-index: 101;
 }
-.controls button {
+.process-sequence .controls button,
+.hero-image .controls button {
 	background-color: #0008;
 	color: white;
 	text-decoration: none;
@@ -89,22 +91,51 @@ header nav ul li a:active {
 	border: 0;
 	text-align: center;
 }
-.controls button:hover,
-.controls button:focus {
+.process-sequence .controls button:hover,
+.process-sequence .controls button:focus,
+.hero-image .controls button:hover,
+.hero-image .controls button:focus {
 	background-color: #3338;
 }
-.controls button:active {
+.process-sequence .controls button:active,
+.hero-image .controls button:active {
 	background-color: #6668;
 }
-.controls .right {
+.process-sequence .controls .right,
+.hero-image .controls .right {
 	position: absolute;
 	right: 1rem;
 }
-.controls .left {
+.process-sequence .controls .left,
+.hero-image .controls .left {
 	position: absolute;
 	left: 1rem;
 }
 
-
-
-
+.process-sequence {
+	background-color: #aaa;
+	position: relative;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+.process-sequence .aspect-container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+.process-sequence .sequence {
+	height: 100%;
+	width: 100%;
+}
+.process-sequence .sequence .image-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.process-sequence .sequence .image-container img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+}

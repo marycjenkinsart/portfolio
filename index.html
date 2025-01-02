@@ -22,12 +22,10 @@
 		<div
 			class="hero-image"
 			id="top"
+			style="padding-bottom: calc(2/3 * 100%);"
 		>
 			<div class="aspect-container">
-				<div
-					class="slider"
-					style="left: 0;"
-				>
+				<div class="slider">
 					<div class="image-container"><img src="media/banner-red-necked-grebe.jpg"/></div>
 					<div class="image-container"><img src="media/banner-hummingbird-gladiolus.jpg"/></div>
 					<div class="image-container"><img src="media/banner-hyacinth-macaw.jpg"/></div>
@@ -42,19 +40,41 @@
 		<div
 			class="hero-image"
 			id="bot"
+			style="padding-bottom: calc(1/2 * 100%);"
 		>
 			<div class="aspect-container">
-				<div
-					class="slider"
-					style="left: 0;"
-				>
-					<div class="image-container"><img src="media/banner-kingfisher.jpg"/></div>
-					<div class="image-container"><img src="media/banner-lazuli-quick.jpg"/></div>
+				<div class="slider">
 					<div class="image-container"><img src="media/banner-redpoll.jpg"/></div>
+					<div class="image-container"><img src="media/banner-lazuli-quick.jpg"/></div>
+					<div class="image-container"><img src="media/banner-kingfisher.jpg"/></div>
 				</div>
 				<div class="controls">
 					<button class="left">&lt;</button>
 					<button class="right">&gt;</button>
+				</div>
+			</div>
+		</div>
+		<h2>Process</h2>
+		<div style="margin: auto; max-width: 600px;">
+			<div
+				class="process-sequence"
+				id="kestrel"
+				style="padding-bottom: calc(5/4 * 100%);"
+			>
+				<div class="aspect-container">
+					<div class="sequence" >
+						<div class="image-container"><img src="media/process/kestrel-comfort/day01.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day02.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day03.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day04.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day05.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day06.jpg"/></div>
+						<div class="image-container"><img src="media/process/kestrel-comfort/day07_FINAL.jpg"/></div>
+					</div>
+					<div class="controls">
+						<button class="left">&lt;</button>
+						<button class="right">&gt;</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -64,6 +84,7 @@
 	<script>
 		makeSlider('#top');
 		makeSlider('#bot');
+		makeProcess('#kestrel');
 	</script>
 </body>
 </html>
