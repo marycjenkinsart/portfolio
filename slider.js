@@ -34,9 +34,11 @@ const makeProcess = (rootNode) => {
 	left.addEventListener('click', () => {
 		sequenceItems.forEach((_,i)=>{
 			sequenceItems[i].classList.remove('inactive');
+			sequenceItems[i].classList.remove('right');
+			sequenceItems[i].classList.add('left');
 		});
-		sequenceItems[sequencePosition].classList.remove('active');
 		sequenceItems[sequencePosition].classList.add('inactive');
+		sequenceItems[sequencePosition].classList.remove('active');
 		sequencePosition += sequenceItemCount;
 		sequencePosition -= 1;
 		sequencePosition %= sequenceItemCount;
@@ -45,9 +47,11 @@ const makeProcess = (rootNode) => {
 	right.addEventListener('click', () => {
 		sequenceItems.forEach((_,i)=>{
 			sequenceItems[i].classList.remove('inactive');
+			sequenceItems[i].classList.remove('left');
+			sequenceItems[i].classList.add('right');
 		});
-		sequenceItems[sequencePosition].classList.remove('active');
 		sequenceItems[sequencePosition].classList.add('inactive');
+		sequenceItems[sequencePosition].classList.remove('active');
 		sequencePosition += 1;
 		sequencePosition %= sequenceItemCount;
 		sequenceItems[sequencePosition].classList.add('active');

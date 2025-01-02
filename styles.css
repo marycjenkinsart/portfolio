@@ -132,9 +132,14 @@ header nav ul li a:active {
 	height: 100%;
 	width: 0;
 	top: 0;
-	left: 0;
 	overflow: hidden;
 	transition: all 200ms ease;
+}
+.process-sequence .sequence .image-container.left {
+	right: 0;
+}
+.process-sequence .sequence .image-container.right {
+	left: 0;
 }
 .process-sequence .sequence .image-container.active{
 	z-index: 100;
@@ -150,5 +155,10 @@ header nav ul li a:active {
 	height: 100%;
 	display: block;
 	object-fit: cover;
+}
+.process-sequence .sequence .image-container.left>img {
+	object-position: 100% 0;
+}
+.process-sequence .sequence .image-container.right>img {
 	object-position: 0 0;
 }
