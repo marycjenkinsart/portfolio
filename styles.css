@@ -135,10 +135,10 @@ header nav ul li a:active {
 	overflow: hidden;
 }
 .process-sequence .sequence .image-container.left {
-	right: 0;
+	left: 0;
 }
 .process-sequence .sequence .image-container.right {
-	left: 0;
+	right: 0;
 }
 .process-sequence .sequence .image-container.incoming{
 	z-index: 100;
@@ -157,10 +157,10 @@ header nav ul li a:active {
 	object-fit: cover;
 }
 .process-sequence .sequence .image-container.left>img {
-	object-position: 100% 0;
+	object-position: 0 0;
 }
 .process-sequence .sequence .image-container.right>img {
-	object-position: 0 0;
+	object-position: 100% 0;
 }
 .process-sequence .label {
 	position: absolute;

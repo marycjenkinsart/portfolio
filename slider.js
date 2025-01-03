@@ -67,6 +67,29 @@ const makeProcess = (rootNode) => {
 			goRight();
 		}
 	});
+	let initialX = 0;
+	sequence.addEventListener('mousedown', (event)=>{
+		event.preventDefault();
+		initialX = event.clientX;
+	});
+	sequence.addEventListener('mouseup', (event)=>{
+		const direction = Math.sign(initialX - event.clientX);
+		go(direction);
+	});
+	let touches = [];
+	sequence.addEventListener('touchstart', (event)=>{
+		event.preventDefault();
+		touches = event.touches;
+		initialX = event.touches[0].clientX;
+	});
+	sequence.addEventListener('touchmove', (event)=>{
+		event.preventDefault();
+		touches = event.touches;
+	});
+	sequence.addEventListener('touchend', (event)=>{
+		const direction = Math.sign(initialX - touches[event.which].clientX);
+		go(direction);
+	});
 	rootNode.focus();
 };
 [...document.querySelectorAll('.process-sequence')].forEach(makeProcess);
