@@ -31,31 +31,38 @@ const makeProcess = (rootNode) => {
 	const sequenceItemCount = sequence.children.length;
 	const sequenceItems = [...sequence.children];
 	let sequencePosition = sequenceItemCount-1;
-	left.addEventListener('click', () => {
+	const go = (direction) => {
+		const directionString = direction === 1 ? 'right' : 'left';
+		const directionRemoveString = direction === 1 ? 'left' : 'right';
 		sequenceItems.forEach((_,i)=>{
-			sequenceItems[i].classList.remove('inactive');
-			sequenceItems[i].classList.remove('right');
-			sequenceItems[i].classList.add('left');
+			sequenceItems[i].classList.remove('outgoing');
 		});
-		sequenceItems[sequencePosition].classList.add('inactive');
-		sequenceItems[sequencePosition].classList.remove('active');
+		sequenceItems[sequencePosition].classList.add('outgoing');
+		sequenceItems[sequencePosition].classList.remove('incoming');
 		sequencePosition += sequenceItemCount;
-		sequencePosition -= 1;
+		sequencePosition += direction;
 		sequencePosition %= sequenceItemCount;
-		sequenceItems[sequencePosition].classList.add('active');
+		sequenceItems[sequencePosition].classList.remove(directionRemoveString);
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => {
+				sequenceItems[sequencePosition].classList.add(directionString);
+				sequenceItems[sequencePosition].classList.add('incoming');
+			});
+		})
+	};
+	const goLeft = () => go(-1);
+	const goRight = () => go(1);
+	left.addEventListener('click', goLeft);
+	right.addEventListener('click', goRight);
+	rootNode.tabIndex = 0;
+	rootNode.addEventListener('keydown', (event)=>{
+		if (event.key === 'ArrowLeft') {
+			goLeft();
+		}
+		if (event.key === 'ArrowRight') {
+			goRight();
+		}
 	});
-	right.addEventListener('click', () => {
-		sequenceItems.forEach((_,i)=>{
-			sequenceItems[i].classList.remove('inactive');
-			sequenceItems[i].classList.remove('left');
-			sequenceItems[i].classList.add('right');
-		});
-		sequenceItems[sequencePosition].classList.add('inactive');
-		sequenceItems[sequencePosition].classList.remove('active');
-		sequencePosition += 1;
-		sequencePosition %= sequenceItemCount;
-		sequenceItems[sequencePosition].classList.add('active');
-	});
-
+	rootNode.focus();
 };
 [...document.querySelectorAll('.process-sequence')].forEach(makeProcess);

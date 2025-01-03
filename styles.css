@@ -133,7 +133,6 @@ header nav ul li a:active {
 	width: 0;
 	top: 0;
 	overflow: hidden;
-	transition: all 200ms ease;
 }
 .process-sequence .sequence .image-container.left {
 	right: 0;
@@ -141,11 +140,12 @@ header nav ul li a:active {
 .process-sequence .sequence .image-container.right {
 	left: 0;
 }
-.process-sequence .sequence .image-container.active{
+.process-sequence .sequence .image-container.incoming{
 	z-index: 100;
 	width: 100%;
+	transition: width 400ms ease;
 }
-.process-sequence .sequence .image-container.inactive{
+.process-sequence .sequence .image-container.outgoing{
 	z-index: 99;
 	width: 100%;
 }
