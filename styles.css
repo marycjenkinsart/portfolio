@@ -162,3 +162,15 @@ header nav ul li a:active {
 .process-sequence .sequence .image-container.right>img {
 	object-position: 0 0;
 }
+.process-sequence .label {
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 101;
+	background-color: #0008;
+	color: white;
+	line-height: 2rem;
+	border-radius: 1rem;
+	padding: 0 1rem;
+	text-align: center;
+}

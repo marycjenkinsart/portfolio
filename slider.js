@@ -24,6 +24,7 @@ const makeSlider = (rootNode) => {
 [...document.querySelectorAll('.hero-image')].forEach(makeSlider);
 
 const makeProcess = (rootNode) => {
+	const label = rootNode.querySelector('.label');
 	const sequence = rootNode.querySelector('.sequence');
 	const left = rootNode.querySelector('.left');
 	const right = rootNode.querySelector('.right');
@@ -48,7 +49,10 @@ const makeProcess = (rootNode) => {
 				sequenceItems[sequencePosition].classList.add(directionString);
 				sequenceItems[sequencePosition].classList.add('incoming');
 			});
-		})
+		});
+		label.innerText = sequencePosition === sequenceItemCount-1
+			? 'Final'
+			: 'Step ' + (sequencePosition+1);
 	};
 	const goLeft = () => go(-1);
 	const goRight = () => go(1);
