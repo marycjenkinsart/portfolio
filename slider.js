@@ -74,6 +74,7 @@ const makeProcess = (rootNode) => {
 	});
 	sequence.addEventListener('mouseup', (event)=>{
 		const direction = Math.sign(initialX - event.clientX);
+		rootNode.focus();
 		go(direction);
 	});
 	let touches = [];
@@ -88,6 +89,7 @@ const makeProcess = (rootNode) => {
 	});
 	sequence.addEventListener('touchend', (event)=>{
 		const direction = Math.sign(initialX - touches[event.which].clientX);
+		rootNode.focus();
 		go(direction);
 	});
 	rootNode.focus();
