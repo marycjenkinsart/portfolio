@@ -3,6 +3,6 @@ title: Blog
 template: blog
 ---
 
-# Blog
+### Blog post
 
-Blog posts go here!
+Coming soon!

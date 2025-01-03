@@ -4,9 +4,7 @@ export default function (config) {
   return basic({
     ...config,
     content: /* html */`
-<div>
-    <h2>This is the PROCESS page</h2>
-</div>
+<h2>Process</h2>
 <div style="margin: auto; max-width: 600px;">
   <div
     class="process-sequence"

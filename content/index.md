@@ -3,6 +3,6 @@ title: Home
 template: home
 ---
 
-# Home
+### About
 
 This is where I post my birds?

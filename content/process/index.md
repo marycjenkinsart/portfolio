@@ -3,7 +3,7 @@ title: Process
 template: process
 ---
 
-# Kestrel Process!!
+### Behind the Scenes
 
 Learn about how paintings happen!
 

@@ -11,7 +11,7 @@ export default function (config) {
   </head>
   <body>
     <div class="container">
-      <h1>Mary C Jenkins Art — Home</h1>
+      <h1>Mary C Jenkins Art</h1>
       <header>
         <nav>
           <ul>

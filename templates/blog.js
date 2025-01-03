@@ -4,9 +4,7 @@ export default function (config) {
   return basic({
     ...config,
     content: /* html */`
-<div>
-    <h2>This is the BLOG page</h2>
-</div>
+<h2>Blog</h2>
 <div>${config.content}</div>
 `
   });
