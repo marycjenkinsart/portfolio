@@ -193,3 +193,23 @@ p:has(img) {
 .date {
 	font-style: italic;
 }
+
+.gallery-works {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.gallery-link {
+	min-width: 256px;
+	max-width: 256px;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+	border: 1px solid #0004;
+	box-shadow: 0 0.25rem 0.25rem #0006;
+	overflow: hidden;
+}
+.card-body {
+	padding: 0 1rem;
+}

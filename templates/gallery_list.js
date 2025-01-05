@@ -48,12 +48,18 @@ export default async function (config) {
     .sort((a, b) => b.frontMatter.date
       .localeCompare(a.frontMatter.date)
     )
-    .map(({thumbnail, link, frontMatter}) => /*html*/`<article class="works-link">
-      <p class="image"><img src="${thumbnail}" /></p>
-      <h3><a href="works/${link}">${frontMatter.title}</a></h3>
-      <p class="date">${frontMatter.date}</p>
-      <p class="medium">Medium: ${frontMatter.medium || 'unlisted'}</p>
-      <p class="size">Size: ${frontMatter.size || 'unlisted'}</p>
+    .map(({thumbnail, link, frontMatter}) => /*html*/`<article class="gallery-link">
+      <div class="image">
+        <a href="works/${link}">
+          <img src="${thumbnail}" />
+        </a>
+      </div>
+      <div class="card-body">
+        <h3><a href="works/${link}">${frontMatter.title}</a></h3>
+        <p class="date">${frontMatter.date}</p>
+        <p class="medium">Medium: ${frontMatter.medium || 'unlisted'}</p>
+        <p class="size">Size: ${frontMatter.size || 'unlisted'}</p>
+      </div>
     </article>`);
   return basic({
     ...config,
