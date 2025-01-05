@@ -2,7 +2,7 @@
 title: A Redpoll Pauses
 template: gallery_item
 date: 2019-10-26
-size: 5x7 inches
+size: 7x5 inches
 medium: water soluble oil on gessobord
 ---
 
