@@ -4,6 +4,7 @@ export default function (config) {
   return basic({
     ...config,
     content: /* html */`
+<h2>Home</h2>
 <div
   class="hero-image"
   style="padding-bottom: calc(2/3 * 100%);"
