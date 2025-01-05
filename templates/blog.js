@@ -4,10 +4,11 @@ export default function (config) {
   return basic({
     ...config,
     content: /* html */`
-<div>
-    <h2>This is the BLOG page</h2>
-</div>
-<div>${config.content}</div>
+<article>
+  <div>&lt; <a href="../../">blog</a></div>
+  <div><p class="date">${config.date}</p></div>
+  <div><p>${config.content}</p></div>
+</article>
 `
   });
 };

@@ -174,3 +174,22 @@ header nav ul li a:active {
 	padding: 0 1rem;
 	text-align: center;
 }
+
+img {
+	max-width: 100%;
+}
+
+p:has(img) {
+	text-align: center;
+}
+
+.blog-post-link {
+	padding: 0 1rem;
+	margin-bottom: 1rem;
+	border-radius: 1rem;
+	border: 1px solid #0004;
+	box-shadow: 0 0.25rem 0.25rem #0006;
+}
+.date {
+	font-style: italic;
+}

@@ -1,8 +1,6 @@
 ---
 title: Blog
-template: blog
+template: blog_list
 ---
 
-# Blog
-
-Blog posts go here!
+# Blog Posts
