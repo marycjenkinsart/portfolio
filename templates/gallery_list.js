@@ -56,9 +56,7 @@ export default async function (config) {
       </div>
       <div class="card-body">
         <h3><a href="works/${link}">${frontMatter.title}</a></h3>
-        <p class="date">${frontMatter.date}</p>
-        <p class="medium">Medium: ${frontMatter.medium || 'unlisted'}</p>
-        <p class="size">Size: ${frontMatter.size || 'unlisted'}</p>
+        <p>${frontMatter.size || 'Unknown size'}, ${frontMatter.medium || 'unknown medum'}</p>
       </div>
     </article>`);
   return basic({
